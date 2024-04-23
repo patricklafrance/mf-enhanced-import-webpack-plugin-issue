@@ -1,0 +1,17 @@
+{
+  "name": "mf-enhanced-import-webpack-plugin-issue",
+  "version": "1.0.0",
+  "description": "Showcase that mf enhanced has an issue when importing the webpack plugin for an ESM project.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "reset": "pnpm run \"/^reset:.*/\"",
+    "reset:node-modules": "pnpm -r --include-workspace-root --parallel exec pnpm dlx rimraf node_modules",
+    "reset:lock-file": "pnpm dlx rimraf pnpm-lock.yaml",
+    "list-outdated-deps": "pnpm outdated -r --format list !eslint",
+    "update-outdated-deps": "pnpm update -r --latest !eslint"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
