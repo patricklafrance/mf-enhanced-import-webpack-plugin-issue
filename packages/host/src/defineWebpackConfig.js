@@ -2,8 +2,8 @@
 
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
-// import { ModuleFederationPlugin } from "@module-federation/enhanced/webpack";
-import ModuleFederation from "@module-federation/enhanced/webpack";
+import { ModuleFederationPlugin } from "@module-federation/enhanced/webpack";
+// import ModuleFederation from "@module-federation/enhanced/webpack";
 
 export function defineWebpackConfig() {
     /** @type {import("webpack").Configuration} */
@@ -45,8 +45,8 @@ export function defineWebpackConfig() {
             ]
         },
         plugins: [
-            new ModuleFederation.ModuleFederationPlugin({
-            // new ModuleFederationPlugin({
+            // new ModuleFederation.ModuleFederationPlugin({
+            new ModuleFederationPlugin({
                 name: "host",
                 remotes: {
                     "remote1": "remote1@http://localhost:8081/remoteEntry.js",

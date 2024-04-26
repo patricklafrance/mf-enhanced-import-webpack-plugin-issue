@@ -42,7 +42,7 @@ packages/host dev:     at async Command.<anonymous> (C:\Dev\poc\mf-enhanced-impo
 packages/host dev:     at async Command.parseAsync (C:\Dev\poc\mf-enhanced-import-webpack-plugin-issue\node_modules\.pnpm\commander@10.0.1\node_modules\commander\lib\command.js:935:5)
 ```
 
-Now, go to the [packages/host/webpack.dev.js](./packages/host/webpack.dev.js) file and replace the following line:
+Now, go to the [packages/host/src/defineWebpackConfig.js](./packages/host/src/defineWebpackConfig.js) file and replace the following line:
 
 ```js
 import { ModuleFederationPlugin } from "@module-federation/enhanced/webpack";
@@ -67,4 +67,42 @@ new ModuleFederation.ModuleFederationPlugin({
 ```
 
 Execute the `pnpm dev` command again at the root of the workspace. The application should start and everything should now works as expected.
+
+Great!
+
+But there's another issue :(
+
+The Jest test runner doesn't like:
+
+```js
+import ModuleFederation from "@module-federation/enhanced/webpack";
+```
+
+It throws the following error:
+
+```
+TypeError: Cannot read properties of undefined (reading 'ModuleFederationPlugin')
+```
+
+To reproduce the issue, execute the following command from the root of workspace:
+
+```bash
+pnpm test
+```
+
+In short, for the `@module-federation/enhanced` package, the webpack CLI requires:
+
+```js
+import ModuleFederation from "@module-federation/enhanced/webpack";
+```
+
+And the Jest CLI requires:
+
+```js
+import { ModuleFederationPlugin } from "@module-federation/enhanced/webpack";
+```
+
+We're stuck!
+
+
 
