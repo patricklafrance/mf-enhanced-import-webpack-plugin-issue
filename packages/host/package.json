@@ -10,13 +10,13 @@
     "dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.build.js",
     "serve-build": "pnpm build && pnpm http-server dist -p 8080 -P http://localhost:8080?",
-    "deploy-netlify": "pnpm build && netlify deploy --dir=packages/host/dist --site=b38e3c2d-31c9-4b9b-847a-4365c6b926c8 --prod"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "compare-versions": "6.1.0",
+    "@swc/helpers": "0.5.11",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "lodash": "4.17.21",
@@ -27,8 +27,11 @@
     "@module-federation/runtime": "0.1.6",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.11",
     "@swc/core": "1.4.14",
+    "@swc/jest": "0.2.36",
     "html-webpack-plugin": "5.6.0",
     "http-server": "14.1.1",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
     "netlify-cli": "17.22.1",
     "swc-loader": "0.2.6",
     "webpack": "5.91.0",
