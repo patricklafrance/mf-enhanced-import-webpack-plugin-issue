@@ -84,10 +84,16 @@ It throws the following error:
 TypeError: Cannot read properties of undefined (reading 'ModuleFederationPlugin')
 ```
 
-To reproduce the issue, execute the following command from the root of workspace:
+To reproduce the issue, execute the following command at the root of workspace:
 
 ```bash
 pnpm test
+```
+
+You should get the following error:
+
+```
+TypeError: Cannot read properties of undefined (reading 'ModuleFederationPlugin')
 ```
 
 In short, for the `@module-federation/enhanced` package, the webpack CLI requires:
