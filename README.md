@@ -110,5 +110,13 @@ import { ModuleFederationPlugin } from "@module-federation/enhanced/webpack";
 
 We're stuck!
 
+## CI builds
+
+I also added 3 CI builds to this repository showing that it's not working with either Node 20, 21 and 22:
+
+- https://github.com/patricklafrance/mf-enhanced-import-webpack-plugin-issue/actions/runs/8857434064
+- https://github.com/patricklafrance/mf-enhanced-import-webpack-plugin-issue/actions/runs/8857434059
+- https://github.com/patricklafrance/mf-enhanced-import-webpack-plugin-issue/actions/runs/8857434065 
+
 
 
