@@ -1,21 +1,14 @@
 // ts-check
 
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
-// import { ModuleFederationPlugin } from "@module-federation/enhanced/webpack";
-import ModuleFederation from "@module-federation/enhanced/webpack";
+import { ModuleFederationPlugin } from "@module-federation/enhanced/webpack";
+// import ModuleFederation from "@module-federation/enhanced/webpack";
 
-export function defineWebpackConfig() {
+export function defineWebpackDevConfig() {
     /** @type {import("webpack").Configuration} */
     return {
-        mode: "development",
+        mode: "production",
         target: "web",
-        devtool: "inline-source-map",
-        devServer: {
-            port: 8080,
-            historyApiFallback: true,
-            hot: true
-        },
         entry: "./src/index.js",
         output: {
             // The trailing / is very important, otherwise paths will ne be resolved correctly.
@@ -45,8 +38,8 @@ export function defineWebpackConfig() {
             ]
         },
         plugins: [
-            new ModuleFederation.ModuleFederationPlugin({
-            // new ModuleFederationPlugin({
+            // new ModuleFederation.ModuleFederationPlugin({
+            new ModuleFederationPlugin({
                 name: "host",
                 remotes: {
                     "remote1": "remote1@http://localhost:8081/remoteEntry.js",
@@ -73,8 +66,7 @@ export function defineWebpackConfig() {
             }),
             new HtmlWebpackPlugin({
                 template: "./public/index.html"
-            }),
-            new ReactRefreshWebpackPlugin()
+            })
         ]
     };
 }

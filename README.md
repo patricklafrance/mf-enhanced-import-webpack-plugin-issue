@@ -42,7 +42,7 @@ packages/host dev:     at async Command.<anonymous> (C:\Dev\poc\mf-enhanced-impo
 packages/host dev:     at async Command.parseAsync (C:\Dev\poc\mf-enhanced-import-webpack-plugin-issue\node_modules\.pnpm\commander@10.0.1\node_modules\commander\lib\command.js:935:5)
 ```
 
-Now, go to the [packages/host/src/defineWebpackConfig.js](./packages/host/src/defineWebpackConfig.js) file and replace the following line:
+Now, go to the [packages/host/src/defineWebpackDevConfig.js](./packages/host/src/defineWebpackDevConfig.js) file and replace the following line:
 
 ```js
 import { ModuleFederationPlugin } from "@module-federation/enhanced/webpack";
