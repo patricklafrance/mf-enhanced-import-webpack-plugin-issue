@@ -4,7 +4,7 @@ name: CI - Node 21
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
 
 env:
   CI: true
