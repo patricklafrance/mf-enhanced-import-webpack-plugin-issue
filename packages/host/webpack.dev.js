@@ -1,5 +1,5 @@
-import { defineWebpackConfig } from "./src/defineWebpackConfig.js";
+import { defineWebpackDevConfig } from "./src/defineWebpackDevConfig.js";
 
-const config = defineWebpackConfig();
+const config = defineWebpackDevConfig();
 
 export default config;

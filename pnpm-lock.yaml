@@ -10,6 +10,9 @@ importers:
 
   packages/host:
     dependencies:
+      '@module-federation/runtime':
+        specifier: 0.1.10
+        version: 0.1.10
       '@swc/helpers':
         specifier: 0.5.11
         version: 0.5.11
@@ -1483,9 +1486,19 @@ packages:
       '@module-federation/sdk': 0.0.0-next-20240425010938
     dev: true
 
+  /@module-federation/runtime@0.1.10:
+    resolution: {integrity: sha512-Oiu+a394whgOulfO2FTlSGDyckdYXaIUEA6KaLonKoaWwEFgwO+EaiL8zaMvO2WztUvpU+Apir+fUuVsyuSMzA==}
+    dependencies:
+      '@module-federation/sdk': 0.1.10
+    dev: false
+
   /@module-federation/sdk@0.0.0-next-20240425010938:
     resolution: {integrity: sha512-wL5zXXKdFEvLNTnt3XcoSs3RkH66Fhq5camJ/eiiKkH5cGkbAH7ffa+ZAyKSW/H/royLrt9fiYm0pE+zyMRC1A==}
     dev: true
+
+  /@module-federation/sdk@0.1.10:
+    resolution: {integrity: sha512-HzRGtt+S45Hzg43tTBxu1lf2Zo8z7slf9S9Q4lN9knfz5ho1IGoQ+Ig6+UI1JYmheuaHOOxz6nVyPx9QzZEREg==}
+    dev: false
 
   /@module-federation/third-party-dts-extractor@0.0.0-next-20240425010938:
     resolution: {integrity: sha512-7w5idX74rJ7j8D3e6AgKkvjr0G9Q7HoN9Se1Z9GJ7DlS4EtWsF4bxG4JR8rxgZEwXdyK6lm1kJIr4MJYYWOrZQ==}

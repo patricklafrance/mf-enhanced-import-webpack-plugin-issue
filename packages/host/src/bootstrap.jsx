@@ -3,7 +3,8 @@
 import { App } from "./App.jsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { loadRemote } from "@module-federation/enhanced/runtime";
+// import { loadRemote } from "@module-federation/enhanced/runtime";
+import { loadRemote } from "@module-federation/runtime";
 
 const { HelloWorld } = await loadRemote("remote1/HelloWorld.jsx")
     .then(mod => {
