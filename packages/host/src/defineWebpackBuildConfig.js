@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import { ModuleFederationPlugin } from "@module-federation/enhanced/webpack";
 // import ModuleFederation from "@module-federation/enhanced/webpack";
 
-export function defineWebpackDevConfig() {
+export function defineWebpackBuildConfig() {
     /** @type {import("webpack").Configuration} */
     return {
         mode: "production",
