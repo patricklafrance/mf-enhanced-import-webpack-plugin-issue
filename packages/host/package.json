@@ -23,7 +23,7 @@
     "useless-lib": "2.0.0"
   },
   "devDependencies": {
-    "@module-federation/enhanced": "0.0.0-next-20240425010938",
+    "@module-federation/enhanced": "0.0.0-next-20240429010049",
     "@pmmmwh/react-refresh-webpack-plugin": "0.5.11",
     "@swc/core": "1.4.14",
     "@swc/jest": "0.2.36",
