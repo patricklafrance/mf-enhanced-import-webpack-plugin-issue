@@ -1,7 +1,7 @@
-import { defineWebpackConfig } from "../src/defineWebpackConfig.js";
+import { defineWebpackDevConfig } from "../src/defineWebpackDevConfig.js";
 
 test("test webpack config", () => {
-    const config = defineWebpackConfig();
+    const config = defineWebpackDevConfig();
 
     expect(config).not.toBeNull();
 });
